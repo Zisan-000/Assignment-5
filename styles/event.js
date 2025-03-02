@@ -11,8 +11,6 @@ const year = date.getFullYear();
 const formattedDate = `${month} ${day} ${year}`;
 document.getElementById('month').innerText = formattedDate;
 
-//time
-const time = new Date().toLocaleTimeString();
 
 // clear history
 document.getElementById('clear').addEventListener('click',function(){
@@ -34,7 +32,7 @@ document.getElementById('btn-1').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('fix').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('fix').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
     
@@ -52,7 +50,7 @@ document.getElementById('btn-2').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('dark').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('dark').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
 })
@@ -68,7 +66,7 @@ document.getElementById('btn-3').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('home').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('home').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
 })
@@ -84,7 +82,7 @@ document.getElementById('btn-4').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('emoji').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('emoji').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
    
@@ -101,7 +99,7 @@ document.getElementById('btn-5').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('api').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('api').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
    
@@ -118,7 +116,7 @@ document.getElementById('btn-6').addEventListener('click',function(){
     const commentContainer = document.getElementById('comment-container');
     const commentElement = document.createElement('p');
     commentElement.classList.add('comment');
-    commentElement.innerText = `You have Complete The Task ${document.getElementById('job').innerText} at ${time}`;
+    commentElement.innerText = `You have Complete The Task ${document.getElementById('job').innerText} at ${new Date().toLocaleTimeString()}`;
     commentContainer.appendChild(commentElement);
     check += 1;
     clicked(check);
