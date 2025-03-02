@@ -20,6 +20,8 @@ document.getElementById('clear').addEventListener('click',function(){
     commentContainer.innerHTML = '';
 })
 
+
+
 // btn-1
 document.getElementById('btn-1').addEventListener('click',function(){
     alert('Board Updated Successfully');
@@ -34,6 +36,8 @@ document.getElementById('btn-1').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('fix').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
+    
 })
 
 // btn-2
@@ -50,6 +54,7 @@ document.getElementById('btn-2').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('dark').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
 })
 // btn-3
 document.getElementById('btn-3').addEventListener('click',function(){
@@ -65,6 +70,7 @@ document.getElementById('btn-3').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('home').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
 })
 // btn-4
 document.getElementById('btn-4').addEventListener('click',function(){
@@ -80,6 +86,8 @@ document.getElementById('btn-4').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('emoji').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
+   
 })
 // btn-5
 document.getElementById('btn-5').addEventListener('click',function(){
@@ -95,6 +103,8 @@ document.getElementById('btn-5').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('api').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
+   
 })
 // btn-6
 document.getElementById('btn-6').addEventListener('click',function(){
@@ -110,4 +120,21 @@ document.getElementById('btn-6').addEventListener('click',function(){
     commentElement.classList.add('comment');
     commentElement.innerText = `You have Complete The Task ${document.getElementById('job').innerText} at ${time}`;
     commentContainer.appendChild(commentElement);
+    check += 1;
+    clicked(check);
+})
+
+// all button clicked
+let check = 0;
+function clicked(check){
+    if (check===6){
+        alert('Congrates!!! You have completed all the current task');
+    }
+   
+}
+
+// discover
+
+document.getElementById('discover').addEventListener('click',function(){
+    window.location.href='blog.html';
 })
