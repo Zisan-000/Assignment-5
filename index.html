@@ -16,6 +16,15 @@
     .poppins {
       font-family: "Poppins", sans-serif;
     }
+    .comment{
+      /* bg-slate-100 p-3 m-3 rounded-lg hidden comment */
+      background-color: #F4F7FF;
+      color: black;
+      padding: 12px;
+      margin: 12px;
+      border-radius: 8px;
+
+    }
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -45,7 +54,7 @@
         <div class="flex gap-6 mr-2">
           <div class="flex text-black text-xl gap-2 rounded-full bg-slate-100 p-3">
             <img src="./assets/checkbox.png" alt="">
-            <span class="font-bold">23</span>
+            <span class="font-bold" id="task-complete">23</span>
           </div>
           <div class="rounded-full bg-slate-100 ">
             <img class="p-3" src="./assets/theme-btn.png" alt="">
@@ -62,7 +71,7 @@
         <div class="flex justify-around m-2 p-3 items-center">
           <div class="flex items-center bg-slate-100 px-10 py-8 rounded-xl gap-3 font-light text-sm">
             <img class="bg-white p-3 rounded-2xl" src="./assets/checkbox.png" alt="">
-            <p>Task Assigned <br><span class="text-2xl font-bold">06</span></p>
+            <p>Task Assigned <br><span class="text-2xl font-bold">0</span><span class="text-2xl font-bold" id="task-left">6</span></p>
 
           </div>
           <div
@@ -72,7 +81,7 @@
           </div>
           <div class="bg-slate-100 flex items-center px-10 py-8 rounded-xl gap-3">
             <img class="rounded-3xl bg-white p-4" src="./assets/calender.png" alt="">
-            <p>Wed ,<br><span class="font-bold"> Jul 28 2025</span> </p>
+            <p><span id="day"> Wed</span> ,<br><span class="font-bold" id="month"> Jul 28 2025</span> </p>
           </div>
         </div>
         <hr class="border-dashed border-black my-4">
@@ -80,74 +89,74 @@
         <div class="grid grid-cols-3 m-5 gap-9">
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">ShopEase</p>
-            <h2 class="text-xl my-4">Fix Mobile Button Issue</h2>
+            <h2 id="fix" class="text-xl my-4">Fix Mobile Button Issue</h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Debug using Chrome <br>DevTools, check for
               overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm text-gray-400">Deadline</span><br><span class="text-sm"> 21 March 2025 </span>
               </p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-1" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">CloudSync</p>
-            <h2 class="text-xl my-4">Add Dark Mode</h2>
+            <h2 id="dark" class="text-xl my-4">Add Dark Mode</h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Store the user's preference in
               <br>localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm font-medium text-gray-400">Deadline</span><br><span class="text-sm"> 21 March
                   2025 </span></p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-2" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">SwiftPay</p>
-            <h2 class="text-xl my-4">Optimize Home page</h2>
+            <h2 id="home" class="text-xl my-4">Optimize Home page</h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Debug using Chrome <br>DevTools, check for
               overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm text-gray-400">Deadline</span><br><span class="text-sm"> 21 March 2025 </span>
               </p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-3" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">Meta</p>
-            <h2 class="text-xl my-4">Add new emoji 🤲</h2>
+            <h2 id="emoji" class="text-xl my-4">Add new emoji 🤲</h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Debug using Chrome <br>DevTools, check for
               overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm text-gray-400">Deadline</span><br><span class="text-sm"> 21 March 2025 </span>
               </p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-4" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">Google LLC</p>
-            <h2 class="text-xl my-4">Integrate OpenAI API</h2>
+            <h2 id="api" class="text-xl my-4">Integrate OpenAI API</h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Debug using Chrome <br>DevTools, check for
               overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm text-gray-400">Deadline</span><br><span class="text-sm"> 21 March 2025 </span>
               </p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-5" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
           <div class="bg-slate-100 p-4 rounded-xl">
             <p class="bg-white rounded-xl mr-36 p-2 text-center ">Glassdoar</p>
-            <h2 class="text-xl my-4">Improve Job searching </h2>
+            <h2 id="job" class="text-xl my-4">Improve Job searching </h2>
             <p class="truncate bg-white text-gray-400 my-5 p-4 rounded-xl">Debug using Chrome <br>DevTools, check for
               overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
             <hr class="border-dashed border-black my-5">
             <div class="flex justify-between">
               <p> <span class="text-sm text-gray-400">Deadline</span><br><span class="text-sm"> 21 March 2025 </span>
               </p>
-              <button class="btn bg-acent text-white">Completed</button>
+              <button id="btn-6" class="btn bg-acent text-white">Completed</button>
             </div>
           </div>
         </div>
@@ -159,15 +168,18 @@
           <img src="./assets/activity.png" alt="">
           <p>Activity Log</p>
         </div>
-        <button class="ml-28 btn bg-acent text-white">Clear History</button>
+        <button id="clear" class="ml-28 btn bg-acent text-white">Clear History</button>
         <hr class="border-dashed border-black mt-4">
-        <div></div>
+        <div class="text-left" id="comment-container">
+          <p class="bg-slate-100 p-3 m-3 rounded-lg hidden comment"></p>
+        </div>
       </section>
 
     </section>
 
   </main>
 
+  <script src="./styles/event.js"></script>
 </body>
 
 </html>
